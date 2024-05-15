@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Variables */
+:root {
+  --primary-red-clr: hsl(0, 78%, 62%);
+  --primary-cyan-clr:  hsl(180, 62%, 55%);
+  --primary-orange-clr: hsl(34, 97%, 64%);
+  --primary-blue-clr: hsl(212, 86%, 64%);
+
+  --neutral-dark-blue: hsl(234, 12%, 34%);
+  --neutral-grayish-blue: hsl(229, 6%, 66%);
+  --neutral-lihgt-gray:  hsl(0, 0%, 98%);
+}
+body {
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  color: var(--neutral-grayish-blue);
+  background-color: var(--neutral-lihgt-gray);
+}
+@media (min-width: 767px) {
+  body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+}
+.container {
+  padding: 2rem;
+}
+.container h1, h2 {
+  color: var(--neutral-dark-blue);
+  line-height: 1.1;
+}
+.container .up-content {
+  max-width: 500px;
+  margin: 0 auto 3rem;
+   text-align: center;
+}
+.container .up-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.container .up-content .title-one {
+  font-weight: 200;
+} 
+.container .up-content .title-two {
+  font-weight: 600;
+} 
+.container .down-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+@media (max-width: 767px) {
+  .container .down-content {
+    flex-direction: column;
+  }
+  .container .up-content h1 {
+    font-size: 1.5rem !important;
+  }
+}
+.container .down-content .box {
+  padding: 1.5rem;
+  max-width: 350px;
+  height: 230px;
+  border-radius: 0.5rem;
+  position: relative;
+  box-shadow: 0 0 16px var(--neutral-grayish-blue);
+}
+.container .down-content .box h2 {
+ margin-bottom: 0.5rem;
+ font-size: 1.2rem;
+}
+.container .down-content .box p {
+  font-size: 0.938rem;
+}
+.container .down-content .box img {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+.container .down-content .team-builder {
+  margin-bottom: 1.5rem;
+}
+/* Colored top border style */
+.container .down-content .supervisor {
+  border-top: 3px solid var(--primary-cyan-clr);
+}
+.container .down-content .team-builder {
+  border-top: 3px solid var(--primary-red-clr);
+} 
+.container .down-content .karma {
+  border-top: 3px solid var(--primary-orange-clr);
+}
+.container .down-content .calculator{
+  border-top: 3px solid var(--primary-blue-clr);
+}
+
+
